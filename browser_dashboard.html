@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browser Environment Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1, header p {
+      margin: 5px;
+    }
+    section {
+      padding: 20px;
+    }
+    button {
+      margin: 5px 0;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .info-block {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Browser Environment Dashboard</h1>
+    <p><strong>Complete Name:</strong> Jaylon Kirby R. Froa</p>
+    <p><strong>Sex:</strong> Male</p>
+    <p><strong>Address:</strong> Agpo, Lagonoy, Camarines Sur, Philippines</p>
+    <p><strong>Course, Year, and Section:</strong> BSIT 2-A</p>
+    <p><strong>Name of School:</strong> Partido State University</p>
+    <p><strong>Semester and Academic Year:</strong> 2nd Sem AY 2024–2025</p>
+    <p><strong>Subject Code and Title:</strong> PF2 - Event Driven Programming</p>
+    <p><strong>Name of Subject Instructor:</strong> Arjay Abio</p>
+  </header>
+
+  <section>
+    <div class="info-block">
+      <h2>Browser Information</h2>
+      <p id="browserInfo"></p>
+    </div>
+
+    <div class="info-block">
+      <h2>Page Information</h2>
+      <p>URL: <span id="url"></span></p>
+      <p>Hostname: <span id="hostname"></span></p>
+      <p>Page Title: <span id="pageTitle"></span></p>
+      <button onclick="changeTitle()">Change Page Title</button>
+    </div>
+
+    <div class="info-block">
+      <h2>Navigation Controls</h2>
+      <button onclick="location.reload()">Reload Page</button>
+      <button onclick="location.href='https://www.example.com'">Go to Example.com</button>
+      <button onclick="history.back()">Back</button>
+      <button onclick="history.forward()">Forward</button>
+    </div>
+  </section>
+
+  <script>
+    const browserInfo = `
+      Browser: ${navigator.userAgent} <br>
+      Platform: ${navigator.platform} <br>
+      Java Enabled: ${navigator.javaEnabled()} <br>
+      Screen Resolution: ${screen.width} x ${screen.height} <br>
+      Available Screen Size: ${screen.availWidth} x ${screen.availHeight} <br>
+      Color Depth: ${screen.colorDepth}
+    `;
+    document.getElementById('browserInfo').innerHTML = browserInfo;
+
+    document.getElementBy
