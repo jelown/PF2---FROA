@@ -1,60 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Student Homepage</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    header {
-      background-color: #444;
-      color: white;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-    section a {
-      display: block;
-      margin: 10px 0;
-      font-size: 16px;
-      color: blue;
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Interactive Canvas Shape Editor</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Browser Environment Dashboard</h1>
+    <h1>Interactive Canvas Shape Editor</h1>
     <p><strong>Complete Name:</strong> Jaylon Kirby R. Froa</p>
     <p><strong>Sex:</strong> Male</p>
-    <p><strong>Address:</strong> Agpo, Lagonoy, Camarines Sur, Philippines</p>
-    <p><strong>Course, Year, and Section:</strong> BSIT 2-A</p>
+    <p><strong>Address:</strong> Lagonoy Camarines Sur</p>
+    <p><strong>Course, Year, and Section:</strong> BSIT 2A</p>
     <p><strong>Name of School:</strong> Partido State University</p>
-    <p><strong>Semester and Academic Year:</strong> 2nd Sem AY 2024–2025</p>
+    <p><strong>Semester and Academic Year:</strong> 2nd Semester, AY 2024–2025</p>
     <p><strong>Subject Code and Title:</strong> PF2 - Event Driven Programming</p>
-    <p><strong>Name of Subject Instructor:</strong> Arjay Abio</p>
+    <p><strong>Name of Subject Instructor:</strong> Arjay F. Abio</p>
   </header>
-  <section>
-    <h2>Activity Links</h2>
-    <a href=" https://jelown.github.io/GuessingGame/">1. Guess the Secret Word Game</a>
-    <a href="browser_dashboard.html">2. Browser Environment Dashboard</a>
-  </section>
 
-  <script>
-    function updateBackgroundColor() {
-      const width = window.innerWidth;
-      if (width < 600) {
-        document.body.style.backgroundColor = 'blue';
-      } else if (width >= 600 && width <= 991) {
-        document.body.style.backgroundColor = 'green';
-      } else {
-        document.body.style.backgroundColor = 'orange';
-      }
-    }
+  <main style="text-align: center;">
+    <button disabled style="cursor: default;">
+      Click to add circles. Select, drag, scroll to resize, and press Delete to remove.
+    </button>
+    <button id="clearCanvasBtn">Clear Canvas</button>
+    <br><br>
+    <canvas id="canvas" width="600" height="400" style="border: 2px solid black;"></canvas>
+  </main>
 
-    window.addEventListener('load', updateBackgroundColor);
-    window.addEventListener('resize', updateBackgroundColor);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
